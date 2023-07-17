@@ -6,8 +6,6 @@
 }
 
 :root {
-    --bgc-primary: #fff;
-
     --box-shadow-header: #5a5a5a;
     --box-shadow-book-card-outer: #a4a4a4;
 }
@@ -40,8 +38,6 @@
     align-items: center;
 
     border-radius: 1.25em;
-
-    background-color: var(--bgc-primary);
 
     box-shadow: 10px 10px 20px 0px var(--box-shadow-book-card-outer);
 }
