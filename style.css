@@ -45,3 +45,14 @@
 
     box-shadow: 10px 10px 20px 0px var(--box-shadow-book-card-outer);
 }
+
+.book-card-inner {
+    width: 73%;
+    height: 70%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
+    align-items: center;
+    gap: 1em;
+}
