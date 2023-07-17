@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Amaranth';
+    src: url(amaranth-fontface/Amaranth-Regular.woff2) format('woff2'),
+        url(amaranth-fontface/Amaranth-Regular.woff) format('woff');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +14,12 @@
 :root {
     --box-shadow-header: #5a5a5a;
     --box-shadow-book-card-outer: #a4a4a4;
+
+    --font-family: 'Amaranth';
+}
+
+body {
+    font-family: var(--font-family);
 }
 
 .header {
