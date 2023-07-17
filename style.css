@@ -16,3 +16,15 @@
 
     box-shadow: 1px 0px 14px 12px var(--box-shadow-header);
 }
+
+.main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 400px);
+    grid-auto-rows: 300px;
+    justify-content: center;
+    justify-items: center;
+    gap: 3em 3em;
+
+    margin-top: 7em;
+    padding: 2em;
+}
