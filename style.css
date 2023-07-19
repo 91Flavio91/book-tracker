@@ -17,6 +17,8 @@
     --box-shadow-header: #5a5a5a;
     --box-shadow-book-card-outer: #a4a4a4;
 
+    --bgc-read-status-button: #ffc151;
+
     --font-family: 'Amaranth';
 }
 
@@ -102,4 +104,22 @@ p {
     grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr;
     align-items: center;
     gap: 1em;
+}
+
+.read-status-button {
+    position: absolute;
+
+    grid-area: 4 / 2;
+    justify-self: end;
+
+    width: 70%;
+
+    border-radius: 0.8em;
+    border: none;
+    padding: 0.5em 1em;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    background-color: var(--bgc-read-status-button);
 }
