@@ -67,6 +67,10 @@ p {
 .header {
     height: 100px;
 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
     background: linear-gradient(155deg, rgba(70, 202, 228, 1) 0%, rgba(0, 167, 108, 0.6769301470588236) 77%);
 
     box-shadow: 1px 0px 14px 12px var(--box-shadow-header);
