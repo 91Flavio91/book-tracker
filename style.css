@@ -126,7 +126,7 @@ p {
 
     background-color: var(--bgc-read-status-button);
 
-    transition: all 0.3s;
+    transition: all 0.2s;
 }
 
 .read-status-button:hover {
