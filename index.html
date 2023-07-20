@@ -14,7 +14,7 @@
         <h1>Your Book Library</h1>
         <button class="show-modal-button"></button>
     </div>
-    
+
     <div class="main">
         <div class="book-card-outer">
             <div class="book-card-inner">
@@ -34,6 +34,35 @@
         </div>
         <div class="book-card-outer">
             <div></div>
+        </div>
+    </div>
+
+    <div class="mask">
+        <div class="modal-box">
+            <form action="">
+                <h3>New Book</h3>
+                <div>
+                    <input type="text" name="" id="title" required>
+                    <label for="title">TITLE</label>
+                </div>
+
+                <div>
+                    <input type="text" name="" id="author" required>
+                    <label for="author">AUTHOR</label>
+                </div>
+
+                <div>
+                    <input type="number" name="" id="pages" min="1" required>
+                    <label for="pages">PAGES</label>
+                </div>
+
+                <div>
+                    <input type="checkbox" name="" id="read">
+                    <label for="read">READ IT?</label>
+                </div>
+
+                <button class="add-book-button">Add to Library</button>
+            </form>
         </div>
     </div>
     
