@@ -18,6 +18,7 @@
     --box-shadow-book-card-outer: #a4a4a4;
     --box-shadow-show-modal-button: #808080;
     --box-shadow-show-modal-button-inset: #fff;
+    --box-shadow-show-modal-button-hover: #f8f8ff;
     --box-shadow-delete-book-button: #d6d6d6;
     --box-shadow-delete-book-button-inset: #fff;
 
@@ -95,6 +96,12 @@ p {
         inset 0px -0.8px 1.6px 0.5px var(--box-shadow-show-modal-button-inset);
 
     transition: all 0.8s;
+}
+
+.show-modal-button:hover {
+    box-shadow: 0px 0px 14px var(--box-shadow-show-modal-button-hover),
+        inset 0px -0.8px 1.6px 0.5px var(--box-shadow-show-modal-button-inset);
+
 }
 
 .show-modal-button::after {
