@@ -16,9 +16,12 @@
 
     --box-shadow-header: #5a5a5a;
     --box-shadow-book-card-outer: #a4a4a4;
+    --box-shadow-show-modal-button: #808080;
+    --box-shadow-show-modal-button-inset: #fff;
     --box-shadow-delete-book-button: #d6d6d6;
     --box-shadow-delete-book-button-inset: #fff;
 
+    --bgc-show-modal-button: #ffc151;
     --bgc-delete-book-button: #fa8072;
     --bgc-read-status-button: #ffc151;
 
@@ -74,6 +77,33 @@ p {
     background: linear-gradient(155deg, rgba(70, 202, 228, 1) 0%, rgba(0, 167, 108, 0.6769301470588236) 77%);
 
     box-shadow: 1px 0px 14px 12px var(--box-shadow-header);
+}
+
+.show-modal-button {
+    width: 4em;
+    height: 4em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border: 4px solid var(--bgc-show-modal-button);
+
+    background-color: var(--bgc-show-modal-button);
+    box-shadow: 0px 0px 14px var(--box-shadow-show-modal-button),
+        inset 0px -0.8px 1.6px 0.5px var(--box-shadow-show-modal-button-inset);
+
+    transition: all 0.8s;
+}
+
+.show-modal-button::after {
+    content: url(icons/plus-addbook-icon.svg);
+
+    width: 1.5em;
+    height: 1.5em;
+
+    display: block;
 }
 
 .main {
