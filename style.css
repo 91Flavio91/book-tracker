@@ -156,3 +156,17 @@ p {
 
     color: #ffffff;
 }
+
+.delete-book-button:active {
+    width: 1.5em;
+    height: 1.5em;
+
+    right: -6.5%;
+
+    box-shadow: 0px 2.5px 2.5px 1px var(--box-shadow-delete-book-button),
+        inset 0px -0.8px 0px 0px var(--box-shadow-delete-book-button-inset);
+}
+
+.delete-book-button:active::after {
+    font-size: 1.5em;
+}
