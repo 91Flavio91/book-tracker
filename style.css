@@ -316,6 +316,10 @@ input[type="checkbox"] {
     transition: all 0.5s;
 }
 
+input[type="checkbox"]:hover {
+    opacity: 1;
+}
+
 input[type="checkbox"]:checked {
     background-color: var(--bgc-default);
 
