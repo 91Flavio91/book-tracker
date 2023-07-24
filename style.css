@@ -300,6 +300,15 @@ label:hover {
     text-shadow: 0 0 15px var(--text-shadow);
 }
 
+form div:first-of-type:focus-within label,
+form div:nth-of-type(2):focus-within label,
+form div:nth-of-type(3):focus-within label {
+    visibility: hidden;
+    opacity: 0;
+
+    font-size: 0.8rem;
+}
+
 input {
     border: none;
     border-bottom: 1px solid var(--border-color-input);
