@@ -16,6 +16,7 @@
     --color-h3: #fff;
     --color-form-widgets: #fff;
     --border-color-input: #fff;
+    --border-color-add-book-button: #000;
 
     --text-shadow: #fff;
     --box-shadow-header: #5a5a5a;
@@ -27,6 +28,7 @@
     --box-shadow-read-status-button-hover-inset: #fff;
     --box-shadow-delete-book-button: #d6d6d6;
     --box-shadow-delete-book-button-inset: #fff;
+    --box-shadow-add-book-button-hover: #fff;
 
     --bgc-default: #fff;
     --bgc-show-modal-button: #ffc151;
@@ -357,6 +359,24 @@ input[type="checkbox"]:checked::after {
 
     width: 1em;
     content: url(icons/check-icon.svg);
+}
+
+.add-book-button {
+    border: none;
+    border-bottom: 2px solid var(--border-color-add-book-button);
+    border-radius: 0.8em;
+    padding: 1em 2em;
+
+    font-family: inherit;
+    font-size: 1rem;
+
+    background-color: #ffc151;
+
+    transition: all 0.2s;
+}
+
+.add-book-button:hover {
+    box-shadow: 0px 0px 15px 1px var(--box-shadow-add-book-button-hover);
 }
 
 .mask {
