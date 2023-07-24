@@ -278,6 +278,10 @@ label {
     color: var(--color-form-widgets);
 }
 
+label {
+    opacity: 0.3;
+}
+
 input {
     border: none;
     border-bottom: 1px solid #fff;
