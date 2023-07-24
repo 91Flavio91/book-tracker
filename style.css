@@ -17,6 +17,7 @@
     --color-form-widgets: #fff;
     --border-color-input: #fff;
 
+    --text-shadow: #fff;
     --box-shadow-header: #5a5a5a;
     --box-shadow-book-card-outer: #a4a4a4;
     --box-shadow-show-modal-button: #808080;
@@ -284,11 +285,19 @@ label {
 
 label {
     opacity: 0.3;
+
+    transition: all 0.3s;
 }
 
 label:not([for="read"]) {
     position: absolute;
     top: 35%;
+}
+
+label:hover {
+    opacity: 1;
+
+    text-shadow: 0 0 15px var(--text-shadow);
 }
 
 input {
