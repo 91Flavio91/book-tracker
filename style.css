@@ -13,6 +13,7 @@
 
 :root {
     --border-color-h2-pseudoelement: #808080;
+    --color-form-widgets: #fff;
 
     --box-shadow-header: #5a5a5a;
     --box-shadow-book-card-outer: #a4a4a4;
@@ -258,6 +259,14 @@ form div {
     justify-content: center;
     align-items: center;
     gap: 2em;
+}
+
+input,
+label {
+    appearance: none;
+    outline: none;
+
+    color: var(--color-form-widgets);
 }
 
 .mask {
