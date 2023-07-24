@@ -309,6 +309,12 @@ form div:nth-of-type(3):focus-within label {
     font-size: 0.8rem;
 }
 
+input:not([type="checkbox"]):valid:not(:focus)+label {
+    top: -10%;
+
+    font-size: 0.8rem;
+}
+
 input {
     border: none;
     border-bottom: 1px solid var(--border-color-input);
