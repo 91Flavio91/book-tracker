@@ -302,6 +302,8 @@ input {
 
 
 input[type="checkbox"] {
+    position: relative;
+
     width: 1.5em;
     height: 1.5em;
 
@@ -309,6 +311,15 @@ input[type="checkbox"] {
     border: 1px solid var(--border-color-input);
 
     opacity: 0.3;
+}
+
+input[type="checkbox"]::after {
+    position: absolute;
+    top: 15.5%;
+    left: 15.5%;
+
+    width: 1em;
+    content: url(icons/check-icon.svg);
 }
 
 .mask {
