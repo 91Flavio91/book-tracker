@@ -27,6 +27,7 @@
     --box-shadow-delete-book-button: #d6d6d6;
     --box-shadow-delete-book-button-inset: #fff;
 
+    --bgc-default: #fff;
     --bgc-show-modal-button: #ffc151;
     --bgc-delete-book-button: #fa8072;
     --bgc-read-status-button: #ffc151;
@@ -311,6 +312,14 @@ input[type="checkbox"] {
     border: 1px solid var(--border-color-input);
 
     opacity: 0.3;
+
+    transition: all 0.5s;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--bgc-default);
+
+    opacity: 1;
 }
 
 input[type="checkbox"]:checked::after {
