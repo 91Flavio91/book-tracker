@@ -262,6 +262,8 @@ form {
 }
 
 form div {
+    position: relative;
+
     display: flex;
     flex-direction: row-reverse;
     /*The row-reverse is to switch the position of the checkbox input and its label*/
@@ -280,6 +282,11 @@ label {
 
 label {
     opacity: 0.3;
+}
+
+label:not([for="read"]) {
+    position: absolute;
+    top: 35%;
 }
 
 input {
