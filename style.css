@@ -235,3 +235,11 @@ form {
 
     padding-bottom: 2em;
 }
+
+form div {
+    display: flex;
+    flex-direction: row-reverse; /*This is to switch the position of the checkbox input and its label*/
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+}
