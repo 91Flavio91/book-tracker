@@ -229,6 +229,19 @@ p {
     font-size: 1.5em;
 }
 
+.modal-box {
+    position: sticky;
+    top: 20%;
+
+    max-width: 400px;
+    width: 80%;
+
+    margin: auto;
+    border: 2px solid black;
+
+    background: rgb(0, 0, 0, 0.8);
+}
+
 form {
     display: flex;
     flex-direction: column;
