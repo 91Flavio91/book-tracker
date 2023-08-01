@@ -322,6 +322,7 @@ input {
     border-bottom: 1px solid var(--border-color-input);
     padding: 0.5em;
 
+    font-family: inherit;
     font-size: 1.2rem;
 
     background: inherit;
