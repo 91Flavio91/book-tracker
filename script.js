@@ -7,21 +7,25 @@ const Book = function (title, author, pages, read, initialBookIndex) {
     this.initialBookIndex = initialBookIndex;
 };
 
-const form = document.querySelector('form');
-form.addEventListener('submit', function (e) {
-    e.preventDefault();
+const addFormSubmitEvent = function () {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
 
-    title = this[0].value;
-    author = this[1].value;
-    pages = this[2].value;
-    read = this[3].checked;
-    initialBookIndex = bookLibrary.length;
+        title = this[0].value;
+        author = this[1].value;
+        pages = this[2].value;
+        read = this[3].checked;
+        initialBookIndex = bookLibrary.length;
 
-    this[0].value = '';
-    this[1].value = '';
-    this[2].value = '';
-    this[3].checked = false;
-});
+        this[0].value = '';
+        this[1].value = '';
+        this[2].value = '';
+        this[3].checked = false;
+
+        bookLibrary.push(new Book(title, author, pages, read, initialBookIndex));
+    });
+}
 
 const showModalBox = function () {
     const showModalButton = document.querySelector('.show-modal-button');
@@ -35,3 +39,4 @@ const showModalBox = function () {
 }
 
 showModalBox();
+addFormSubmitEvent();
