@@ -1,3 +1,12 @@
+let bookLibrary = [];
+const Book = function (title, author, pages, read, initialBookIndex) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+    this.initialBookIndex = initialBookIndex;
+};
+
 const form = document.querySelector('form');
 form.addEventListener('submit', function (e) {
     e.preventDefault();
