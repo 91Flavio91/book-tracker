@@ -24,8 +24,9 @@ const addFormSubmitEvent = function () {
         this[3].checked = false;
 
         bookLibrary.push(new Book(title, author, pages, read, initialBookIndex));
+        hideModalBox();
     });
-}
+};
 
 const showModalBox = function () {
     const showModalButton = document.querySelector('.show-modal-button');
@@ -36,7 +37,14 @@ const showModalBox = function () {
         mask.classList.add('mask-visible');
         modalBox.classList.add('modal-box-visible');
     });
-}
+};
+const hideModalBox = function () {
+    const mask = document.querySelector('.mask');
+    const modalBox = document.querySelector('.modal-box');
+
+    mask.classList.remove('mask-visible');
+    modalBox.classList.remove('modal-box-visible');
+};
 
 showModalBox();
 addFormSubmitEvent();
