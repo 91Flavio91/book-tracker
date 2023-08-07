@@ -8,6 +8,22 @@ const Book = function (title, author, pages, read, initialBookIndex) {
 };
 
 const bookActions = {
+    removeBook(buttonDeleteBook, bookToRemoveFromLibrary) {
+        const bookIndex = buttonDeleteBook.parentElement.parentElement.getAttribute('data-book-index');
+        const bookSiblingsList = document.querySelectorAll(`[data-book-index="${bookIndex}"] ~ div`);
+
+        for (i = 0; i < bookSiblingsList.length; i++) {
+            let bookSiblingIndex = bookSiblingsList[i].getAttribute('data-book-index');
+            bookSiblingsList[i].setAttribute('data-book-index', bookSiblingIndex - 1);
+        };
+
+        bookLibrary.splice(bookLibrary.indexOf(bookToRemoveFromLibrary), 1);
+
+        const main = document.querySelector('.main');
+        const divBookCardOuter = buttonDeleteBook.parentElement.parentElement;
+        main.removeChild(divBookCardOuter);
+    },
+    
     showBook() {
         const main = document.querySelector('.main');
         const divBookCardOuter = document.createElement('div');
