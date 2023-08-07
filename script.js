@@ -23,6 +23,17 @@ const bookActions = {
         const divBookCardOuter = buttonDeleteBook.parentElement.parentElement;
         main.removeChild(divBookCardOuter);
     },
+
+    changeReadStatus(buttonReadStatus) {
+        if (buttonReadStatus.textContent === 'Read') {
+            buttonReadStatus.textContent = 'Not Read';
+            buttonReadStatus.classList.toggle('not-read');
+        }
+        else if (buttonReadStatus.textContent === 'Not Read') {
+            buttonReadStatus.textContent = 'Read';
+            buttonReadStatus.classList.toggle('not-read');
+        }
+    },
     
     showBook() {
         const main = document.querySelector('.main');
