@@ -39,6 +39,21 @@ const bookActions = {
         divBookCardInner.append(h2Title, paraAuthor, paraPages, paraReadStatus, buttonReadStatus, buttonDeleteBook);
         divBookCardOuter.appendChild(divBookCardInner);
         main.appendChild(divBookCardOuter);
+
+        this.setBookButtonsAsProperties();
+    },
+
+    setBookButtonsAsProperties() {
+        this.buttonDeleteBook = document.querySelector(`.book-card-outer[data-book-index="${this.initialBookIndex}"] .delete-book-button`);
+        this.buttonReadStatus = document.querySelector(`.book-card-outer[data-book-index="${this.initialBookIndex}"] .read-status-button`);
+        const thisBook = this;
+
+        this.buttonDeleteBook.addEventListener('click', function () {
+            Book.prototype.removeBook(this, thisBook);
+        });
+        this.buttonReadStatus.addEventListener('mousedown', function () {
+            Book.prototype.changeReadStatus(this);
+        })
     }
 }
 Object.setPrototypeOf(Book.prototype, bookActions);
