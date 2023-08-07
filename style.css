@@ -17,6 +17,7 @@
     --color-form-widgets: #fff;
     --border-color-input: #fff;
     --border-color-add-book-button: #000;
+    --border-color-read-status-button: #ffc151;
 
     --text-shadow: #fff;
     --box-shadow-header: #5a5a5a;
@@ -178,7 +179,7 @@ h3 {
     width: 70%;
 
     border-radius: 0.8em;
-    border: none;
+    border: 1px solid var(--border-color-read-status-button);
     padding: 0.5em 1em;
 
     font-family: inherit;
