@@ -7,6 +7,42 @@ const Book = function (title, author, pages, read, initialBookIndex) {
     this.initialBookIndex = initialBookIndex;
 };
 
+const bookActions = {
+    showBook() {
+        const main = document.querySelector('.main');
+        const divBookCardOuter = document.createElement('div');
+        const divBookCardInner = document.createElement('div');
+        const h2Title = document.createElement('h2');
+        const paraAuthor = document.createElement('p');
+        const paraPages = document.createElement('p');
+        const paraReadStatus = document.createElement('p');
+        const buttonReadStatus = document.createElement('button');
+        const buttonDeleteBook = document.createElement('button');
+
+        divBookCardOuter.classList.add('book-card-outer');
+        divBookCardInner.classList.add('book-card-inner');
+        buttonReadStatus.classList.add('read-status-button');
+        buttonDeleteBook.classList.add('delete-book-button');
+
+        divBookCardOuter.setAttribute('data-book-index', `${this.initialBookIndex}`);
+
+        h2Title.textContent = this.title;
+        paraAuthor.textContent = `Author: ${this.author}`;
+        paraPages.textContent = `Pages: ${this.pages}`;
+        paraReadStatus.textContent = 'Read it?'
+        if (this.read === true) buttonReadStatus.textContent = 'Read';
+        else if (this.read === false) {
+            buttonReadStatus.textContent = 'Not Read';
+            buttonReadStatus.classList.add('not-read');
+        }
+
+        divBookCardInner.append(h2Title, paraAuthor, paraPages, paraReadStatus, buttonReadStatus, buttonDeleteBook);
+        divBookCardOuter.appendChild(divBookCardInner);
+        main.appendChild(divBookCardOuter);
+    }
+}
+Object.setPrototypeOf(Book.prototype, bookActions);
+
 const addFormSubmitEvent = function () {
     const form = document.querySelector('form');
     form.addEventListener('submit', function (e) {
@@ -24,6 +60,7 @@ const addFormSubmitEvent = function () {
         this[3].checked = false;
 
         bookLibrary.push(new Book(title, author, pages, read, initialBookIndex));
+        bookLibrary[bookLibrary.length - 1].showBook();
         hideModalBox();
     });
 };
