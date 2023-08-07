@@ -198,6 +198,10 @@ h3 {
         inset 0px -0.8px 0px 0px var(--box-shadow-read-status-button-hover-inset);
 }
 
+.read-status-button.not-read {
+    background-color: #fff;
+}
+
 .delete-book-button {
     position: absolute;
     top: -12%;
