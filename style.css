@@ -198,6 +198,14 @@ h3 {
         inset 0px -0.8px 0px 0px var(--box-shadow-read-status-button-hover-inset);
 }
 
+.read-status-button:active {
+    width: 70%;
+
+    font-size: 1rem;
+
+    box-shadow: none;
+}
+
 .read-status-button.not-read {
     background-color: #fff;
 }
