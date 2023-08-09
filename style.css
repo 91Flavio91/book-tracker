@@ -12,6 +12,7 @@
 }
 
 :root {
+    --color-h1: #fff;
     --border-color-h2-pseudoelement: #808080;
     --color-h3: #fff;
     --color-form-widgets: #fff;
@@ -19,7 +20,8 @@
     --border-color-add-book-button: #000;
     --border-color-read-status-button: #ffc151;
 
-    --text-shadow: #fff;
+    --text-shadow-h1-span: #000;
+    --text-shadow-label: #fff;
     --box-shadow-header: #5a5a5a;
     --box-shadow-book-card-outer: #a4a4a4;
     --box-shadow-show-modal-button: #808080;
@@ -43,6 +45,12 @@ body {
     position: relative;
 
     font-family: var(--font-family);
+}
+
+h1 span {
+    color: var(--color-h1);
+    
+    text-shadow: 0 0 15px var(--text-shadow-h1-span) ;
 }
 
 h2 {
@@ -317,7 +325,7 @@ label:not([for="read"]) {
 label:hover {
     opacity: 1;
 
-    text-shadow: 0 0 15px var(--text-shadow);
+    text-shadow: 0 0 15px var(--text-shadow-label);
 }
 
 form div:first-of-type:focus-within label,
