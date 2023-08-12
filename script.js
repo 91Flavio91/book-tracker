@@ -74,7 +74,6 @@ class Book {
         this.buttonDeleteBook = document.querySelector(`.book-card-outer[data-book-index="${this.initialBookIndex}"] .delete-book-button`);
         this.buttonReadStatus = document.querySelector(`.book-card-outer[data-book-index="${this.initialBookIndex}"] .read-status-button`);
         const thisBook = this;
-        console.log(thisBook);
 
         this.buttonDeleteBook.addEventListener('click', function () {
             Book.prototype.removeBook(this, thisBook);
