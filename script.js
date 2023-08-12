@@ -1,18 +1,18 @@
 let bookLibrary = [];
-const Book = function (title, author, pages, read, initialBookIndex) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.initialBookIndex = initialBookIndex;
-};
+class Book {
+    constructor(title, author, pages, read, initialBookIndex) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.initialBookIndex = initialBookIndex;
+    }
 
-const bookActions = {
     removeBook(buttonDeleteBook, bookToRemoveFromLibrary) {
         const bookIndex = buttonDeleteBook.parentElement.parentElement.getAttribute('data-book-index');
         const bookSiblingsList = document.querySelectorAll(`[data-book-index="${bookIndex}"] ~ div`);
 
-        for (i = 0; i < bookSiblingsList.length; i++) {
+        for (let i = 0; i < bookSiblingsList.length; i++) {
             let bookSiblingIndex = bookSiblingsList[i].getAttribute('data-book-index');
             bookSiblingsList[i].setAttribute('data-book-index', bookSiblingIndex - 1);
         };
@@ -22,7 +22,7 @@ const bookActions = {
         const main = document.querySelector('.main');
         const divBookCardOuter = buttonDeleteBook.parentElement.parentElement;
         main.removeChild(divBookCardOuter);
-    },
+    }
 
     changeReadStatus(buttonReadStatus) {
         if (buttonReadStatus.textContent === 'Read') {
@@ -33,8 +33,8 @@ const bookActions = {
             buttonReadStatus.textContent = 'Read';
             buttonReadStatus.classList.toggle('not-read');
         }
-    },
-    
+    }
+
     showBook() {
         const main = document.querySelector('.main');
         const divBookCardOuter = document.createElement('div');
@@ -68,22 +68,22 @@ const bookActions = {
         main.appendChild(divBookCardOuter);
 
         this.setBookButtonsAsProperties();
-    },
+    }
 
     setBookButtonsAsProperties() {
         this.buttonDeleteBook = document.querySelector(`.book-card-outer[data-book-index="${this.initialBookIndex}"] .delete-book-button`);
         this.buttonReadStatus = document.querySelector(`.book-card-outer[data-book-index="${this.initialBookIndex}"] .read-status-button`);
         const thisBook = this;
+        console.log(thisBook);
 
         this.buttonDeleteBook.addEventListener('click', function () {
             Book.prototype.removeBook(this, thisBook);
         });
         this.buttonReadStatus.addEventListener('mousedown', function () {
             Book.prototype.changeReadStatus(this);
-        })
+        });
     }
 }
-Object.setPrototypeOf(Book.prototype, bookActions);
 
 const addFormSubmitEvent = function () {
     const form = document.querySelector('form');
