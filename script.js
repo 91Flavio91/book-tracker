@@ -73,7 +73,7 @@ class Book {
     setBookButtonsAsProperties() {
         this.buttonDeleteBook = document.querySelector(`.book-card-outer[data-book-index="${this.initialBookIndex}"] .delete-book-button`);
         this.buttonReadStatus = document.querySelector(`.book-card-outer[data-book-index="${this.initialBookIndex}"] .read-status-button`);
-        const thisBook = this;
+        const thisBook = this; //This variable 'freezes' the current book object that called the setBookButtonsAsProperties method. In this way, it will be available to the buttonDeleteBook listener to delete the book object from the bookLibrary array.
 
         this.buttonDeleteBook.addEventListener('click', function () {
             Book.prototype.removeBook(this, thisBook);
